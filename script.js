@@ -18,7 +18,7 @@ function generatePassword() {
 var lengthOfPassword = prompt("how many characters would you like (must be between 8-128)");
 
 //
-if (lengthOfPassword >= 8 && pwLength <= 128) {
+if (lengthOfPassword >= 8 && lengthOfPassword <= 128) {
   password.length = lengthOfPassword;
 }
  else { alert("please select pword between 8-128");  alert("error-cannot create pword"); }
