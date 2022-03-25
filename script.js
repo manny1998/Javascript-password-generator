@@ -14,17 +14,14 @@ function generatePassword() {
   userPassword = "";
   passwordCharacters = "";
 
-//creating pop ups with password requirements
+//creating legth of pword pop up 
 var lengthOfPassword = prompt("how many characters would you like (must be between 8-128)");
 
-//
+//if condition isnt met then alerts will pop up
 if (lengthOfPassword >= 8 && lengthOfPassword <= 128) {
   password.length = lengthOfPassword;
-}
- else { 
-   alert("please select pword between 8-128");
- }
 
+// follow up pop ups with 
 var specialCharacters = confirm("Click ok to confirm if you want special characters");
 
 var numericalcharacters = confirm("Click ok to confirm if you want numbers");
@@ -33,12 +30,26 @@ var lowerCaseCharacter = confirm("Click ok to confirm if you want lowercase lett
 
 var upperCaseCharacter = confirm("Click ok to confirm if you want uppercase letters");
 
+}
+else { 
+  alert("please select password between 8-128");
+}
+
 // selecting ok= true which will trigger e.g. lowercase be adding to password characters.
 if (specialCharacters === true) {
   passwordCharacters += specialCharacterss
 }
+if (numericalcharacters === true) {
+  passwordCharacters += numberss
+}
+if (lowerCaseCharacter === true) {
+  passwordCharacters += lowerCaseLetters
+}
+if (upperCaseCharacter === true) {
+  passwordCharacters += upperCaseLetters
+}
 else {
-  alert("error-cannot create pword");
+  alert("error-cannot create password");
 }
 
 
