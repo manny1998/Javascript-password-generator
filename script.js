@@ -52,16 +52,14 @@ else {
   alert("error-cannot create password");
 }
 
-
-
+//once user selects character type from if statements above then the formula below is used to generate the user password.
+for (var i = 0; i < lengthOfPassword; i++) {
+  userPassword += passwordCharacters[Math.floor(Math.random() * passwordCharacters.length)]; 
+}
 
 return userPassword; 
 }
 
-
-
-
- 
 
 
 // Write password to the #password input
